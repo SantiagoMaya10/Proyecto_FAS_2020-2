@@ -4,7 +4,7 @@ Fundamentos de arquitectura de software
 
 ## Integrantes
 
-* Jhojan Felipe Bektrán
+* Jhojan Felipe Beltrán
 * Julian Alejandro Rojas
 * Juan David Ruiz
 * Jean Paul Yepes
