@@ -17,11 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth.views import LoginView
-from core.views import signup
+from core.views import signup, signupOffer
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', LoginView.as_view(), name="login"),
     path('signup/', signup, name="signup"),
-
+    path('signupOffer/', signupOffer, name="signupOffer"),
 ]

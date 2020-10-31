@@ -2,7 +2,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
-from core.forms import SignUpForm
+from core.forms import SignUpForm, SignUpOfferForm
 
 
 def signup(request):
@@ -18,3 +18,13 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
+
+def signupOffer(request):
+    if request.method == 'POST':
+        form = SignUpOfferForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = SignUpOfferForm()
+    return render(request, 'registration/signupOffer.html', {'form': form})

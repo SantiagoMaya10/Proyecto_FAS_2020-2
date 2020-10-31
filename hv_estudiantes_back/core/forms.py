@@ -20,3 +20,13 @@ class SignUpForm(UserCreationForm):
         model = Usuario
         fields = ('username', 'password1', 'password2', 'documento', 'nombre', 'email', 'telefono', 'direccion',
                   'fecha_nacimiento', 'sexo', 'nacionalidad', 'tipo', 'categoria')
+
+class SignUpOfferForm(UserCreationForm):
+    documento = forms.CharField(max_length=15, )
+    nombre = forms.CharField(max_length=70)
+    email = forms.EmailField()
+    telefono = forms.CharField(max_length=13, required=True)
+
+    class Meta:
+        model = Usuario
+        fields = ('username', 'password1', 'password2', 'documento', 'nombre', 'email', 'telefono')
